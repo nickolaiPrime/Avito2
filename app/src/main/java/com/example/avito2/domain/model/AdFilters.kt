@@ -5,8 +5,8 @@ enum class SortOrder{
 }
 
 data class AdFilters(
-    val category: String?,
-    val minPrice: Long?,
-    val maxPrice: Long?,
-    val sortOrder: SortOrder
+    val category: String? = null,
+    val minPrice: Long? = null,
+    val maxPrice: Long? = null,
+    val sortOrder: SortOrder = SortOrder.NEW
 )
