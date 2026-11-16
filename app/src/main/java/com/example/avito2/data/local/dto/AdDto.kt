@@ -1,4 +1,4 @@
-package com.example.avito2.data.remote.dto
+package com.example.avito2.data.local.dto
 
 data class AdDto(
     val id: Long,
