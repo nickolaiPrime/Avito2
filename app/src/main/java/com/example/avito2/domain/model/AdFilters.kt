@@ -1,7 +1,7 @@
 package com.example.avito2.domain.model
 
 enum class SortOrder{
-    NEW,CHEAP,EXPENSIVE
+    PRICE_ASC, PRICE_DES, NEW
 }
 
 data class AdFilters(
