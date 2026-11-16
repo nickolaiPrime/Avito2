@@ -41,8 +41,10 @@ class AdsPagingSource(
     override fun getRefreshKey(
         state: PagingState<Int, AdDto>
     ): Int? {
+
         val currentPos = state.anchorPosition ?: return null
         val closestPage = state.closestPageToPosition(currentPos)
+
         closestPage?.let{ page ->
             page.prevKey?.let{ prevKey ->
                 return prevKey + state.config.pageSize
