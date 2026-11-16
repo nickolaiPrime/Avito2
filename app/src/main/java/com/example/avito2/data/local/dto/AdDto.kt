@@ -1,5 +1,7 @@
 package com.example.avito2.data.local.dto
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class AdDto(
     val id: Long,
     val title: String,
