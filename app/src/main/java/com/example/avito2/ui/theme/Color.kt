@@ -2,10 +2,10 @@ package com.example.avito2.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
-
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val MarketPrimary = Color(0xFFFF6B35)
+val MarketBackground = Color(0xFFF7F7F4)
+val MarketSurface = Color(0xFFFFFFFF)
+val MarketText = Color(0xFF191C1A)
+val MarketTextSecondary = Color(0xFF777D78)
+val MarketOutline = Color(0xFFE8EAE6)
+val MarketAccentSoft = Color(0xFFFFE9E1)
