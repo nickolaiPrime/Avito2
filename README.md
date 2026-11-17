@@ -71,6 +71,12 @@ git clone https://github.com/nickolaiPrime/Avito2.git
 ```bash
 gradlew.bat assembleDebug
 ```
+## Скачать приложение
+
+Последняя версия: [Avito2 v0.1.0] (https://github.com/nickolaiPrime/Avito2/releases/tag/v0.1.0)
+
+Для установки скачайте app-debug.apk
+из раздела Assets.
 
 ## Что не реализовано
 
