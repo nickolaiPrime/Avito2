@@ -13,9 +13,13 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class AdsRepositoryImpl(
-    private val source : JsonAdsDataSource
+    private val source: JsonAdsDataSource
 ) : AdsRepository {
-    override fun getAds(): Flow<PagingData<Ad>> {
+
+    override fun getAds(
+        query: String,
+        category: String?
+    ): Flow<PagingData<Ad>> {
 
         return Pager(
             config = PagingConfig(
@@ -25,7 +29,11 @@ class AdsRepositoryImpl(
                 enablePlaceholders = false
             ),
             pagingSourceFactory = {
-                AdsPagingSource(source)
+                AdsPagingSource(
+                    source = source,
+                    query = query,
+                    category = category
+                )
             }
         ).flow.map { pagingData ->
             pagingData.map { dto ->

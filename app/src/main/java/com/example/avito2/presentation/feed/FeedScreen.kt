@@ -21,6 +21,15 @@ import com.example.avito2.presentation.feed.components.AdCard
 import com.example.avito2.presentation.feed.components.CategorySelector
 import com.example.avito2.presentation.feed.components.FeedHeader
 
+private val categoryCodes = mapOf(
+    "Все" to null,
+    "Электроника" to "electronics",
+    "Дом" to "home",
+    "Авто" to "auto",
+    "Одежда" to "clothing",
+    "Хобби" to "hobby",
+    "Услуги" to "services"
+)
 @Composable
 fun FeedScreen(
     viewModel: FeedViewModel,
@@ -59,14 +68,16 @@ fun FeedScreen(
             query = query,
             onQueryChange = { newQuery ->
                 query = newQuery
+                viewModel.updateSearchQuery(newQuery)
             }
         )
 
         CategorySelector(
             categories = categories,
             selectedCategory = selectedCategory,
-            onCategorySelected = {category ->
+            onCategorySelected = { category ->
                 selectedCategory = category
+                viewModel.updateCategory(categoryCodes[category])
             },
             modifier = Modifier
                 .fillMaxWidth()
